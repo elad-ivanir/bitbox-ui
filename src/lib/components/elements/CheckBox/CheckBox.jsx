@@ -1,5 +1,5 @@
 import React from "react";
-import booleanInputPropTypes from "../../propTypes/booleanInputPropTypes";
+import booleanInputPropTypes from "../../../propTypes/booleanInputPropTypes";
 
 const CheckBox = ({ id, name, label, disabled, value, onChange }) => null;
 
