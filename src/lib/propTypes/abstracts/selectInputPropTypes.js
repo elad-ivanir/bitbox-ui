@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import inputPropTypes from "./inputPropTypes";
+import inputElementPropTypes from "./inputElementPropTypes";
 
 export default {
-  ...inputPropTypes,
+  ...inputElementPropTypes,
   options: PropTypes.array
 };
