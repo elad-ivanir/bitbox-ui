@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import inputPropTypes from "./abstracts/inputPropTypes";
+import inputElementPropTypes from "./abstracts/inputElementPropTypes";
 
 export default {
-  ...inputPropTypes,
+  ...inputElementPropTypes,
   value: PropTypes.string
 };
