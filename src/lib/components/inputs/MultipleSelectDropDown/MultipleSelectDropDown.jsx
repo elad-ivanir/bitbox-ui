@@ -4,6 +4,7 @@ import multipleSelectPropTypes from "../../../propTypes/multipleSelectPropTypes"
 const MultipleSelectDropDown = ({
   id,
   name,
+  disabled,
   onChange,
   options,
   selectedValues
