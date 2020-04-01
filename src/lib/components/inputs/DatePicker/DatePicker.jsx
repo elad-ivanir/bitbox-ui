@@ -1,7 +1,7 @@
 import React from "react";
 import textInputPropTypes from "../../../propTypes/textInputPropTypes";
 
-const DatePicker = ({ id, value, onChange }) => null;
+const DatePicker = ({ id, name, disabled, value, onChange }) => null;
 
 DatePicker.propTypes = { ...textInputPropTypes };
 
