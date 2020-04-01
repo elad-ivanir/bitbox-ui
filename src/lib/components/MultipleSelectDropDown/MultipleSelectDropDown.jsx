@@ -1,5 +1,5 @@
 import React from "react";
-import multipleSelectPropTypes from "../../../propTypes/multipleSelectPropTypes";
+import multipleSelectPropTypes from "../../propTypes/multipleSelectPropTypes";
 
 const MultipleSelectDropDown = ({
   id,
