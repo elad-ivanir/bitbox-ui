@@ -1,4 +1,6 @@
 import React from "react";
 import defaultTheme from "../constants/defaults/defaultTheme";
 
-export default React.createContext(defaultTheme);
+let themeContext = React.createContext(defaultTheme);
+
+export default themeContext;

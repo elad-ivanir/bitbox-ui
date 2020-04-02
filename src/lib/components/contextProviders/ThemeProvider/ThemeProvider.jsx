@@ -7,7 +7,7 @@ const ThemeProvider = ({ theme, children }) => (
 );
 
 ThemeProvider.propTypes = {
-  ThemeContext: PropTypes.func // TODO: verify type
+  theme: PropTypes.object
 };
 
 export default ThemeProvider;
