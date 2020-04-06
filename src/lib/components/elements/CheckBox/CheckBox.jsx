@@ -16,7 +16,7 @@ const CheckBox = ({
   id,
   name,
   text,
-  disabled,
+  isDisabled,
   value,
   onChange,
   icon: Icon = GoCheck,
@@ -29,12 +29,14 @@ const CheckBox = ({
       name={name}
       onChange={onChange}
       checked={value}
+      disabled={isDisabled}
       type="checkbox"
       className="bui-checkbox--input"
     />
     <span className="bui-checkbox--view">
       <Icon className="bui-checkbox--view--icon" />
     </span>
+    <label htmlFor={name}>{text}</label>
   </StyledWrapper>
   // </ThemeProvider>
 );
