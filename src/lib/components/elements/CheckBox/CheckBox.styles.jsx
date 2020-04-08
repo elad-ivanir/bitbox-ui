@@ -3,54 +3,38 @@ import {
   darkGrey,
   grey,
   lightGrey,
-  white
+  white,
 } from "../../../constants/style/colors";
-/*
-  TODO: (when theme provider is merged):
-  * Use styled-components' ThemeProvider API in order to pass theme properties to CheckBox
-*/
 
-export const StyledWrapper = styled.label`
+export const WrapperLabel = styled.label`
   position: relative;
 
   .bui-checkbox--input {
     position: relative;
-    z-index: -9999;
+    display: none;
   }
 
-  .bui-checkbox--view {
-    width: 18px;
-    height: 18px;
+  .bui-checkbox--icon {
     position: absolute;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: ${lightGrey};
-    box-sizing: border-box;
-    border: 2px ${darkGrey} solid;
-    border-radius: 3px;
+    display: block;
+  }
+
+  .bui-checkbox--icon:hover {
+    cursor: pointer;
+  }
+
+  .bui-checkbox--icon__unchecked {
+    font-size: 16px;
+  }
+
+  .bui-checkbox--icon__checked {
+    font-size: 0;
     transition: all 200ms ease-in-out;
   }
 
-  .bui-checkbox--view:hover {
-    box-shadow: 0.15px 0.15px 7px ${grey};
-  }
-
-  .bui-checkbox--input:checked + .bui-checkbox--view {
-    background: #ff4d4d;
-    border: none;
+  .bui-checkbox--input:checked + .bui-checkbox--icon__checked {
+    font-size: 16px;
     transition: all 200ms ease-in-out;
-  }
-
-  .bui-checkbox--view--icon {
-    color: ${white};
-    opacity: 0;
-  }
-
-  .bui-checkbox--input:checked
-    + .bui-checkbox--view
-    > .bui-checkbox--view--icon {
-    opacity: 1;
   }
 `;

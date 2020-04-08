@@ -1,50 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { ThemeProvider } from "styled-components";
-import { GoCheck } from "react-icons/go";
+import { ThemeProvider } from "styled-components";
 import booleanInputPropTypes from "../../../propTypes/booleanInputPropTypes";
-import { StyledWrapper } from "./CheckBox.styles";
-
-/*
-  TODO: (after theme provider is merged):
-  * add withTheme HOC to CheckBox in export line
-  * uncomment ThemeProvider lines
-*/
+import getIcons from "../../../selectors/checkBoxShapeSelector";
+import withTheme from "../../../hoc/withTheme/withTheme";
+import { WrapperLabel } from "./CheckBox.styles";
 
 // is it worth renaming value to isChecked?
-const CheckBox = ({
-  id,
-  name,
-  text,
-  isDisabled,
-  value,
-  onChange,
-  icon: Icon = GoCheck,
-  theme
-}) => (
-  // <ThemeProvider theme={theme}>
-  <StyledWrapper>
-    <input
-      id={id}
-      name={name}
-      onChange={onChange}
-      checked={value}
-      disabled={isDisabled}
-      type="checkbox"
-      className="bui-checkbox--input"
-    />
-    <span className="bui-checkbox--view">
-      <Icon className="bui-checkbox--view--icon" />
-    </span>
-    <label htmlFor={name}>{text}</label>
-  </StyledWrapper>
-  // </ThemeProvider>
-);
+const CheckBox = (props) => {
+  console.log(props);
+
+  let { UncheckedIcon, CheckedIcon } = getIcons(props.shape);
+  return (
+    <ThemeProvider theme={props.theme}>
+      <WrapperLabel>
+        <input
+          id={props.id}
+          name={props.name}
+          onChange={props.onChange}
+          checked={props.value}
+          disabled={props.isDisabled}
+          type="checkbox"
+          className="bui-checkbox--input"
+        />
+        <CheckedIcon className="bui-checkbox--icon bui-checkbox--icon__checked" />
+        <UncheckedIcon className="bui-checkbox--icon bui-checkbox--icon__unchecked" />
+      </WrapperLabel>
+    </ThemeProvider>
+  );
+};
 
 CheckBox.propTypes = {
   ...booleanInputPropTypes,
   text: PropTypes.string,
-  icon: PropTypes.node
+  shape: PropTypes.string,
 };
 
-export default CheckBox;
+export default withTheme(CheckBox);
