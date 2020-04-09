@@ -7,7 +7,11 @@ import {
 } from "../../../constants/style/colors";
 
 export const WrapperLabel = styled.label`
+  width: 18px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .bui-checkbox--input {
     position: relative;
@@ -25,7 +29,7 @@ export const WrapperLabel = styled.label`
   }
 
   .bui-checkbox--icon__unchecked {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .bui-checkbox--icon__checked {
@@ -34,7 +38,7 @@ export const WrapperLabel = styled.label`
   }
 
   .bui-checkbox--input:checked + .bui-checkbox--icon__checked {
-    font-size: 16px;
+    font-size: 18px;
     transition: all 200ms ease-in-out;
   }
 `;

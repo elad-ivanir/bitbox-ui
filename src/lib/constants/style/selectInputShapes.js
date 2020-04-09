@@ -1,9 +1,5 @@
-import {
-  FaRegCircle,
-  FaCheckCircle,
-  FaRegSquare,
-  FaCheckSquare,
-} from "react-icons/fa";
+import { FaRegSquare, FaCheckSquare } from "react-icons/fa";
+import { IoIosRadioButtonOff, IoIosRadioButtonOn } from "react-icons/io";
 
 export default {
   square: {
@@ -11,7 +7,7 @@ export default {
     CheckedIcon: FaCheckSquare,
   },
   circle: {
-    UncheckedIcon: FaRegCircle,
-    CheckedIcon: FaCheckCircle,
+    UncheckedIcon: IoIosRadioButtonOff,
+    CheckedIcon: IoIosRadioButtonOn,
   },
 };

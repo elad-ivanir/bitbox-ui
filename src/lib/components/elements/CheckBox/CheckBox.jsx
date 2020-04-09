@@ -8,8 +8,6 @@ import { WrapperLabel } from "./CheckBox.styles";
 
 // is it worth renaming value to isChecked?
 const CheckBox = (props) => {
-  console.log(props);
-
   let { UncheckedIcon, CheckedIcon } = getIcons(props.shape);
   return (
     <ThemeProvider theme={props.theme}>
