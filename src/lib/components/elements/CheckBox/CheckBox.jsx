@@ -4,14 +4,14 @@ import { ThemeProvider } from "styled-components";
 import booleanInputPropTypes from "../../../propTypes/booleanInputPropTypes";
 import getIcons from "../../../selectors/checkBoxShapeSelector";
 import withTheme from "../../../hoc/withTheme/withTheme";
-import { WrapperLabel } from "./CheckBox.styles";
+import { CheckBoxView, TextLabel } from "./CheckBox.styles";
 
-// is it worth renaming value to isChecked?
 const CheckBox = (props) => {
   let { UncheckedIcon, CheckedIcon } = getIcons(props.shape);
+
   return (
     <ThemeProvider theme={props.theme}>
-      <WrapperLabel>
+      <CheckBoxView>
         <input
           id={props.id}
           name={props.name}
@@ -21,9 +21,12 @@ const CheckBox = (props) => {
           type="checkbox"
           className="bui-checkbox--input"
         />
-        <CheckedIcon className="bui-checkbox--icon bui-checkbox--icon__checked" />
-        <UncheckedIcon className="bui-checkbox--icon bui-checkbox--icon__unchecked" />
-      </WrapperLabel>
+        <span className="bui-checkbox--icon-container">
+          <CheckedIcon className="bui-checkbox--icon bui-checkbox--icon__checked" />
+          <UncheckedIcon className="bui-checkbox--icon bui-checkbox--icon__unchecked" />
+        </span>
+        <TextLabel htmlFor={props.id}>{props.text}</TextLabel>
+      </CheckBoxView>
     </ThemeProvider>
   );
 };
@@ -31,7 +34,7 @@ const CheckBox = (props) => {
 CheckBox.propTypes = {
   ...booleanInputPropTypes,
   text: PropTypes.string,
-  shape: PropTypes.string,
+  shape: PropTypes.string
 };
 
 export default withTheme(CheckBox);
