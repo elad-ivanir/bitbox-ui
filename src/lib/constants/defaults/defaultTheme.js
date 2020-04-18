@@ -1,6 +1,5 @@
 export default {
   colors: {
-    mode: "light",
     main: "#262626"
   },
   typography: {

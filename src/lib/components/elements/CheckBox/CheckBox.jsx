@@ -5,6 +5,7 @@ import booleanInputPropTypes from "../../../propTypes/booleanInputPropTypes";
 import getIcons from "../../../selectors/checkBoxShapeSelector";
 import withTheme from "../../../hoc/withTheme/withTheme";
 import { CheckBoxView, TextLabel } from "./CheckBox.styles";
+import testIDs from "../../../constants/tests/dataTestIDs";
 
 const CheckBox = (props) => {
   let { UncheckedIcon, CheckedIcon } = getIcons(props.shape);
@@ -20,6 +21,7 @@ const CheckBox = (props) => {
           disabled={props.isDisabled}
           type="checkbox"
           className="bui-checkbox--input"
+          data-testid={testIDs.CheckBox}
         />
         <span className="bui-checkbox--icon-container">
           <CheckedIcon className="bui-checkbox--icon bui-checkbox--icon__checked" />
