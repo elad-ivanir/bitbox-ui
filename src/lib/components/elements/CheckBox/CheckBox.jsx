@@ -7,7 +7,7 @@ import useTheme from "../../../hooks/useTheme";
 import { CheckBoxView, TextLabel } from "./CheckBox.styles";
 import testIDs from "../../../constants/tests/dataTestIDs";
 
-const CheckBox = ({...booleanInputPropTypes, text, shape}) => {
+const CheckBox = ({ id, name, onChange, value, isDisabled, text, shape }) => {
   const theme = useTheme();
   let { UncheckedIcon, CheckedIcon } = getIcons(shape);
 

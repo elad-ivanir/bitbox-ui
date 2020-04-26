@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CheckBoxView = styled.label`
   display: inline-flex;
   align-items: center;
+
   &:hover,
   & *:hover {
     cursor: pointer;
@@ -41,7 +42,6 @@ export const CheckBoxView = styled.label`
   .bui-checkbox--input:checked ~ .bui-checkbox--icon-container {
     .bui-checkbox--icon__checked {
       font-size: ${(props) => props.theme.sizing.CheckBox}px;
-      transition: all 200ms ease-in-out;
     }
 
     .bui-checkbox--icon__unchecked {
