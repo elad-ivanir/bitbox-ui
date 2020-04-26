@@ -3,22 +3,23 @@ import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 import booleanInputPropTypes from "../../../propTypes/booleanInputPropTypes";
 import getIcons from "../../../selectors/checkBoxShapeSelector";
-import withTheme from "../../../hoc/withTheme/withTheme";
+import useTheme from "../../../hooks/useTheme";
 import { CheckBoxView, TextLabel } from "./CheckBox.styles";
 import testIDs from "../../../constants/tests/dataTestIDs";
 
-const CheckBox = (props) => {
-  let { UncheckedIcon, CheckedIcon } = getIcons(props.shape);
+const CheckBox = ({...booleanInputPropTypes, text, shape}) => {
+  const theme = useTheme();
+  let { UncheckedIcon, CheckedIcon } = getIcons(shape);
 
   return (
-    <ThemeProvider theme={props.theme}>
+    <ThemeProvider theme={theme}>
       <CheckBoxView>
         <input
-          id={props.id}
-          name={props.name}
-          onChange={props.onChange}
-          checked={props.value}
-          disabled={props.isDisabled}
+          id={id}
+          name={name}
+          onChange={onChange}
+          checked={value}
+          disabled={isDisabled}
           type="checkbox"
           className="bui-checkbox--input"
           data-testid={testIDs.CheckBox}
@@ -27,7 +28,7 @@ const CheckBox = (props) => {
           <CheckedIcon className="bui-checkbox--icon bui-checkbox--icon__checked" />
           <UncheckedIcon className="bui-checkbox--icon bui-checkbox--icon__unchecked" />
         </span>
-        <TextLabel htmlFor={props.id}>{props.text}</TextLabel>
+        <TextLabel htmlFor={id}>{text}</TextLabel>
       </CheckBoxView>
     </ThemeProvider>
   );
@@ -39,4 +40,4 @@ CheckBox.propTypes = {
   shape: PropTypes.string
 };
 
-export default withTheme(CheckBox);
+export default CheckBox;
