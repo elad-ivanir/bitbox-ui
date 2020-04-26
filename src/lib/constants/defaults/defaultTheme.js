@@ -5,13 +5,13 @@ export default {
   typography: {
     fontFamily: "Arial, Helvetica, sans-serif",
     fontSizes: {
-      label: 16
+      label: "1em"
     }
   },
   sizing: {
-    CheckBox: 20
+    CheckBox: "1.25rem"
   },
-  spacing: {
-    small: 4
+  margins: {
+    small: "0.25rem"
   }
 };
