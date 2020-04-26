@@ -5,7 +5,7 @@ import {
   FaRegCircle
 } from "react-icons/fa";
 
-export default {
+export const checkboxShapes = {
   square: {
     UncheckedIcon: FaRegSquare,
     CheckedIcon: FaCheckSquare
