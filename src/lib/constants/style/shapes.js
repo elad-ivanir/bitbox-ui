@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import dataTestIDs from "../tests/dataTestIDs";
 
-export default {
+export const checkboxShapes = {
   square: {
     UncheckedIcon: (
       <FaRegSquare data-testid={dataTestIDs.SquareCheckBoxIconUnchecked} />
