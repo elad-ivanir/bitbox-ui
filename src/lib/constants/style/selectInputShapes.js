@@ -1,19 +1,27 @@
+import React from "react";
 import {
   FaDotCircle,
-  FaRegDotCircle,
   FaRegSquare,
   FaCheckSquare,
   FaRegCircle
 } from "react-icons/fa";
-import { FiCircle } from "react-icons/fi";
+import dataTestIDs from "../tests/dataTestIDs";
 
 export default {
   square: {
-    UncheckedIcon: FaRegSquare,
-    CheckedIcon: FaCheckSquare
+    UncheckedIcon: (
+      <FaRegSquare data-testid={dataTestIDs.SquareCheckBoxIconUnchecked} />
+    ),
+    CheckedIcon: (
+      <FaCheckSquare data-testid={dataTestIDs.SquareCheckBoxIconCheckeds} />
+    )
   },
   circle: {
-    UncheckedIcon: FaRegCircle,
-    CheckedIcon: FaDotCircle
+    UncheckedIcon: (
+      <FaRegCircle data-testid={dataTestIDs.CircleCheckBoxIconUnchecked} />
+    ),
+    CheckedIcon: (
+      <FaDotCircle data-testid={dataTestIDs.CircleCheckBoxIconChecked} />
+    )
   }
 };

@@ -13,7 +13,7 @@ const CheckBox = ({ id, name, onChange, value, isDisabled, text, shape }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <CheckBoxView>
+      <CheckBoxView data-testid={testIDs.CheckBoxWrapper}>
         <input
           id={id}
           name={name}
@@ -25,10 +25,16 @@ const CheckBox = ({ id, name, onChange, value, isDisabled, text, shape }) => {
           data-testid={testIDs.CheckBox}
         />
         <span className="bui-checkbox--icon-container">
-          <CheckedIcon className="bui-checkbox--icon bui-checkbox--icon__checked" />
-          <UncheckedIcon className="bui-checkbox--icon bui-checkbox--icon__unchecked" />
+          {React.cloneElement(CheckedIcon, {
+            className: "bui-checkbox--icon bui-checkbox--icon__checked"
+          })}
+          {React.cloneElement(UncheckedIcon, {
+            className: "bui-checkbox--icon bui-checkbox--icon__unchecked"
+          })}
         </span>
-        <TextLabel htmlFor={id}>{text}</TextLabel>
+        <TextLabel htmlFor={id} data-testid={testIDs.CheckBoxTextLabel}>
+          {text}
+        </TextLabel>
       </CheckBoxView>
     </ThemeProvider>
   );
