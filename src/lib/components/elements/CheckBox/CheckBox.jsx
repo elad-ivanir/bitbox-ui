@@ -20,8 +20,6 @@ const CheckBox = ({
   const theme = useTheme();
   let { UncheckedIcon, CheckedIcon } = getIcons(shape);
 
-  console.log(id);
-
   return (
     <ThemeProvider theme={theme}>
       <CheckBoxView data-testid={testIDs.CheckBoxWrapper}>
