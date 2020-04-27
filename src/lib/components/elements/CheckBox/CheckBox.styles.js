@@ -53,5 +53,5 @@ export const CheckBoxView = styled.label`
 export const TextLabel = styled.label`
   font-family: ${(props) => props.theme.typography.fontFamily};
   font-size: ${(props) => props.theme.typography.fontSizes.label};
-  padding: ${(props) => props.theme.margins.small}px;
+  padding: ${(props) => props.theme.margins.small};
 `;
