@@ -14,8 +14,8 @@ export const CheckBoxView = styled.label`
   }
 
   .bui-checkbox--icon-container {
-    width: ${(props) => props.theme.sizing.CheckBox}px;
-    height: ${(props) => props.theme.sizing.CheckBox}px;
+    width: ${(props) => props.theme.sizing.CheckBox};
+    height: ${(props) => props.theme.sizing.CheckBox};
     display: inline-block;
     position: relative;
 
@@ -35,13 +35,13 @@ export const CheckBoxView = styled.label`
     }
 
     .bui-checkbox--icon__unchecked {
-      font-size: ${(props) => props.theme.sizing.CheckBox}px;
+      font-size: ${(props) => props.theme.sizing.CheckBox};
     }
   }
 
   .bui-checkbox--input:checked ~ .bui-checkbox--icon-container {
     .bui-checkbox--icon__checked {
-      font-size: ${(props) => props.theme.sizing.CheckBox}px;
+      font-size: ${(props) => props.theme.sizing.CheckBox};
     }
 
     .bui-checkbox--icon__unchecked {
@@ -52,6 +52,6 @@ export const CheckBoxView = styled.label`
 
 export const TextLabel = styled.label`
   font-family: ${(props) => props.theme.typography.fontFamily};
-  font-size: ${(props) => props.theme.typography.fontSizes.label}px;
-  padding: ${(props) => props.theme.spacing.small}px;
+  font-size: ${(props) => props.theme.typography.fontSizes.label};
+  padding: ${(props) => props.theme.margins.small}px;
 `;
