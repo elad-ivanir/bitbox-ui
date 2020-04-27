@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as generateId } from "uuid";
 import { ThemeProvider } from "styled-components";
 import booleanInputPropTypes from "../../../propTypes/booleanInputPropTypes";
 import getIcons from "../../../selectors/checkBoxShapeSelector";
@@ -9,7 +9,7 @@ import { CheckBoxView, TextLabel } from "./CheckBox.styles";
 import testIDs from "../../../constants/tests/dataTestIDs";
 
 const CheckBox = ({
-  id = uuidv4(),
+  id = generateId(),
   name,
   onChange,
   value,
