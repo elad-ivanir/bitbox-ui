@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { v4 as uuidv4 } from "uuid";
 import { ThemeProvider } from "styled-components";
 import booleanInputPropTypes from "../../../propTypes/booleanInputPropTypes";
 import getIcons from "../../../selectors/checkBoxShapeSelector";
@@ -7,9 +8,19 @@ import useTheme from "../../../hooks/useTheme";
 import { CheckBoxView, TextLabel } from "./CheckBox.styles";
 import testIDs from "../../../constants/tests/dataTestIDs";
 
-const CheckBox = ({ id, name, onChange, value, isDisabled, text, shape }) => {
+const CheckBox = ({
+  id = uuidv4(),
+  name,
+  onChange,
+  value,
+  isDisabled,
+  text,
+  shape
+}) => {
   const theme = useTheme();
   let { UncheckedIcon, CheckedIcon } = getIcons(shape);
+
+  console.log(id);
 
   return (
     <ThemeProvider theme={theme}>
