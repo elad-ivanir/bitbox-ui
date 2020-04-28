@@ -1,6 +1,7 @@
 export default {
   colors: {
-    main: "#262626"
+    main: "#262626",
+    mainDisabled: "#949494",
   },
   typography: {
     fontFamily: "Arial, Helvetica, sans-serif",

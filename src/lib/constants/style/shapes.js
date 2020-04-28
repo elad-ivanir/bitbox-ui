@@ -2,7 +2,9 @@ import {
   FaDotCircle,
   FaRegSquare,
   FaCheckSquare,
-  FaRegCircle
+  FaRegCircle,
+  FaAngleDown,
+  FaCheck
 } from "react-icons/fa";
 
 export const checkboxShapes = {
@@ -15,3 +17,7 @@ export const checkboxShapes = {
     CheckedIcon: FaDotCircle
   }
 };
+
+export const ArrowDown = FaAngleDown;
+
+export const CheckSign = FaCheck;
