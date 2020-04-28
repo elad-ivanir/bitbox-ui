@@ -34,7 +34,7 @@ const Jsx = () => {
         }
     ];
     
-    const [value, setValue] = useState(options[0]);
+    const [value, setValue] = useState();
 
     const onChange = (value) => {
         setValue(value);
@@ -42,11 +42,12 @@ const Jsx = () => {
 
     return (
         <Select
-            text={value.text}
+            text={"value.text"}
             options={options}
             textLabel={"text"}
             value={value}
             onChange={onChange}
+            // isMulti={true}
         />
     )
 }

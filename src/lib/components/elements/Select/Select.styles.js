@@ -12,6 +12,7 @@ padding: 32px;
 
     .select-box--main{
         display: grid;
+        height: 42px;
         grid-template-columns: 90% 10%;
         background: ${(props) => props.theme.colors.main};
         border-radius: 8px;
@@ -84,12 +85,16 @@ padding: 32px;
                 border-radius: 0 8px 8px 0;
             }
         }
+
+        .option--check-sign{
+            &[data-ischecked="false"]{
+                visibility: hidden;
+            }
+        }
     }
 
-
-
     .options-container--option, .selected {
-        padding: 12px 24px;
+        padding: 12px 12px;
         cursor: pointer;
     };
 
@@ -103,11 +108,8 @@ padding: 32px;
 
     .options-container--option 
     {
-        display: flex;
-        justify-content: space-between;
-
-
-
+        display: grid;
+        grid-template-columns: 12% 88%;
     }
 
     .options-container--search {
