@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { lightGrey, grey } from "../../../constants/style/colors";
 
 export const CheckBoxView = styled.label`
   display: inline-flex;
@@ -36,6 +37,12 @@ export const CheckBoxView = styled.label`
 
     .bui-checkbox--icon__unchecked {
       font-size: ${(props) => props.theme.sizing.CheckBox};
+      color: ${lightGrey};
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        color: ${grey};
+      }
     }
   }
 
@@ -45,7 +52,7 @@ export const CheckBoxView = styled.label`
     }
 
     .bui-checkbox--icon__unchecked {
-      opacity: 0;
+      font-size: 0;
     }
   }
 `;
