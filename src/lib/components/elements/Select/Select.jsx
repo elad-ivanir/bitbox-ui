@@ -17,7 +17,6 @@ const Select = ({ value, onChange, options, isDisabled, isMulti, text, textLabel
         if(!isMulti) {
             onChange(option); 
             setValue(option);
-            // toggleMenu();
         } else {
             if(!Value.includes(option)){
                 setValue([...Value, option])
